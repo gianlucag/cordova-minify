@@ -103,8 +103,11 @@ switch (platform) {
     case 'ios':
         platformPath = path.join(platformPath, platform, "www");
         break;
+    case 'browser':
+        platformPath = path.join(platformPath, platform, "www");
+        break;
     default:
-        console.log('Hook currently supports only Android and iOS');
+        console.log('Platform not supported');
         return;
 }
 
